@@ -1,0 +1,19 @@
+{
+    "name": "ertygi/aoc",
+    "description": "Advent of Code 2020",
+    "authors": [
+        {
+            "name": "Ertil Gani",
+            "email": "ertilgani@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4",
+        "vlucas/phpdotenv": "^5.2@dev",
+        "cekurte/environment": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {"AoC\\": "src/"}
+    }
+}
