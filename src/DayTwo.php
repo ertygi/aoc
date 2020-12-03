@@ -4,12 +4,12 @@ namespace AoC;
 
 use AoC\PuzzleInput;
 
-class DayTwo
+class DayTwo implements DaysOfAdventInterface
 {
     /** (position) (position) (character) (password) */
     protected $pattern = '/(\d+)-(\d+) ([a-z]): (\w+)/';
 
-    public function partOne()
+    public function partOne(): int
     {
         $input   = PuzzleInput::getData(2);
 
@@ -24,7 +24,10 @@ class DayTwo
         return $count;
     }
 
-    public function partTwo()
+    /**
+     * @return int
+     */
+    public function partTwo(): int
     {
         $input   = PuzzleInput::getData(2);
         $count   = 0;

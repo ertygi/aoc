@@ -1,4 +1,5 @@
 <?php
+
 namespace AoC;
 
 class PuzzleInput
@@ -13,7 +14,7 @@ class PuzzleInput
     {
         $source = self::$sourceUrl . '/2020/day/' . $day . '/input';
         // Create a stream
-        $opts    = array(
+        $opts = array(
             'http' => array(
                 'method' => "GET",
                 'header' => "accept-language: en-GB,en-US;q=0.9,en;q=0.8\r\n" .
@@ -25,6 +26,17 @@ class PuzzleInput
         $context = stream_context_create($opts);
         $file    = file_get_contents($source, false, $context);
         $input   = explode(PHP_EOL, $file);
+
+        return array_filter($input);
+    }
+
+    /**
+     * @param $data
+     * @return false|string[]
+     */
+    public static function transformTestInput($data)
+    {
+        $input = explode(PHP_EOL, $data);
 
         return array_filter($input);
     }

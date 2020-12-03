@@ -4,9 +4,12 @@ namespace AoC;
 
 use AoC\PuzzleInput;
 
-class DayOne
+class DayOne implements DaysOfAdventInterface
 {
-    public function partOne()
+    /**
+     * @return int
+     */
+    public function partOne():int
     {
         $expenseRecords = PuzzleInput::getData(1);
         sort($expenseRecords);
@@ -24,7 +27,10 @@ class DayOne
         return 0;
     }
 
-    public function partTwo()
+    /**
+     * @return int
+     */
+    public function partTwo(): int
     {
         $expenseRecords = PuzzleInput::getData(1);
         sort($expenseRecords);
